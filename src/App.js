@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 import Navbar from "./components/Navbar";
+import ChangeColor from "./components/ChangeColor";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/changecolor" element={<ChangeColor />} />
           </Routes>
         </BrowserRouter>
       </header>
