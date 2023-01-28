@@ -94,3 +94,4 @@ export default userSlice.reducer;
 ```
 
 11. For updating the value in the slice, use useDispatch Hook. For example, refer Login.js.
+12. Adding logout to userSlice.
