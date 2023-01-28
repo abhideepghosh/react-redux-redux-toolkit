@@ -1,6 +1,11 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { login } from "../features/user";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   return (
@@ -33,6 +38,15 @@ const Login = () => {
           borderRadius: "5px",
           padding: "5px",
           margin: "5px",
+        }}
+        onClick={() => {
+          dispatch(
+            login({
+              username,
+              password,
+            })
+          );
+          navigate("/profile");
         }}
       >
         Login
